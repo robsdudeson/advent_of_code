@@ -1,13 +1,15 @@
 defmodule Day1Test do
   use ExUnit.Case
 
-  @input_file_path "#{File.cwd!()}/test/support/input"
+  @input_dir "#{File.cwd!()}/test/support"
 
-  test "counts the number of times readings increase from the last" do
-    assert Day1.hello(@input_file_path) == 7
-  end
+  describe "Day1.part1 - counts when readings increase" do
+    test "sample input" do
+      assert Day1.part1("#{@input_dir}/input_sample") == 7
+    end
 
-  test "counts the number of times reading increase from last actual" do
-    assert Day1.hello() == 7
+    test "full input" do
+      assert Day1.part1("#{@input_dir}/input_full") == 1195
+    end
   end
 end
