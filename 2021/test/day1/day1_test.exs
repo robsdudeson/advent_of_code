@@ -1,7 +1,7 @@
 defmodule Day1Test do
   use ExUnit.Case
 
-  @input_dir "#{File.cwd!()}/test/support"
+  @input_dir "#{File.cwd!()}/test/day1/support"
 
   describe "Day1.part1 - counts when readings increase" do
     test "sample input" do
