@@ -3,6 +3,8 @@ defmodule Day1 do
   Documentation for `Day1`.
   """
 
+  import Common
+
   def part1(file_path) do
     file_path
     |> get_readings()
@@ -12,9 +14,7 @@ defmodule Day1 do
   defp get_readings(file_path),
     do:
       file_path
-      |> File.read!()
-      |> String.trim()
-      |> String.split("\n")
+      |> read_input()
       |> Enum.map(fn reading ->
         {reading_int, _} = Integer.parse(reading)
         reading_int

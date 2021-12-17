@@ -3,9 +3,16 @@ defmodule Day2 do
   Documentation for `Day2`.
   """
 
+  import Common
+
   def part1(file_path) do
     file_path
     |> read_input()
+    |> Enum.map(fn line ->
+      [direction, count] = String.split(line, " ")
+      {count_int, _} = Integer.parse(count)
+      {direction, count_int}
+    end)
     |> process_moves()
     |> calculate_product()
   end
@@ -13,21 +20,14 @@ defmodule Day2 do
   def part2(file_path) do
     file_path
     |> read_input()
+    |> Enum.map(fn line ->
+      [direction, count] = String.split(line, " ")
+      {count_int, _} = Integer.parse(count)
+      {direction, count_int}
+    end)
     |> process_moves_2()
     |> calculate_product()
   end
-
-  defp read_input(file_path),
-    do:
-      file_path
-      |> File.read!()
-      |> String.trim()
-      |> String.split("\n")
-      |> Enum.map(fn line ->
-        [direction, count] = String.split(line, " ")
-        {count_int, _} = Integer.parse(count)
-        {direction, count_int}
-      end)
 
   defp calculate_product({x, y}), do: x * y
 

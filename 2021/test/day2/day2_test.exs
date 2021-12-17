@@ -1,4 +1,4 @@
-defmodule Day1Test do
+defmodule Day2Test do
   use ExUnit.Case
 
   @input_dir "#{File.cwd!()}/test/day2/support"
@@ -19,7 +19,7 @@ defmodule Day1Test do
     end
 
     test "full input" do
-      assert Day2.part2("#{@input_dir}/input_full") == 900
+      assert Day2.part2("#{@input_dir}/input_full") == 2_015_547_716
     end
   end
 end
