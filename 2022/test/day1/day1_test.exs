@@ -5,7 +5,7 @@ defmodule AOC2022.Day1Test do
 
   @input_dir "#{File.cwd!()}/test/day1/support"
 
-  describe "Day1.part1 - counts when readings increase" do
+  describe "Day1.part1 - find elf with max count" do
     test "sample input" do
       assert Day1.part1("#{@input_dir}/input_sample") == 24000
     end
@@ -15,7 +15,7 @@ defmodule AOC2022.Day1Test do
     end
   end
 
-  describe "Day1.part2 - counts when a sliding window count increases" do
+  describe "Day1.part2 - count top three counts" do
     test "sample input" do
       assert Day1.part2("#{@input_dir}/input_sample") == 45000
     end
