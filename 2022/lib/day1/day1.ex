@@ -62,5 +62,5 @@ defmodule AOC2022.Day1 do
     |> top_three_sum()
   end
 
-  defp top_three_sum([e1, e2, e3 | _elves]), do: e1+e2+e3
+  defp top_three_sum([e1, e2, e3 | _elves]), do: e1 + e2 + e3
 end

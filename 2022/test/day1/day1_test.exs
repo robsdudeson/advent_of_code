@@ -21,7 +21,7 @@ defmodule AOC2022.Day1Test do
     end
 
     test "full input" do
-      assert Day1.part2("#{@input_dir}/input_full") == 209481
+      assert Day1.part2("#{@input_dir}/input_full") == 209_481
     end
   end
 end
